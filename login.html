@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in page</title>
+    <!-- google font scr -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-5xl py-8 text-center font-medium">Welcome to your <span class="text-[#c641f6]"> Girl Friend er
+            BANK</span></h1>
+
+    <div class="bg-[#c641f6] text-white p-10 w-3/4 mx-auto space-y-5">
+        <h2 class="text-4xl">Please Login</h2>
+        <input id="input-email" class="block w-3/4 px-5 py-2 rounded-md text-black" type="email" name="" placeholder="Enter your email">
+        <input id="input-password" class="block w-3/4 px-5 py-2 rounded-md text-black" type="password" name="" placeholder="your password">
+        <button id="btn-login" class="bg-blue-700 text-xl px-12 py-2 rounded-md">Log In</button>
+    </div>
+
+    
+
+<script>
+    document.getElementById('btn-login').addEventListener('click', function(){
+        const inputEmail =document.getElementById('input-email');
+        const Email = inputEmail.value;
+        const inputPassword = document.getElementById('input-password');
+        const Password = inputPassword.value;
+        if(Email == 'sheikhchamon9@gmail.com' && Password == 'chamon67890'){
+            console.log('valid user')
+            window.location.href='Gf bank.html';
+        }
+        else{
+            alert('invalid user');
+            inputEmail.value = '';
+            inputPassword.value = '';
+        }
+    })
+</script>
+</body>
+
+</html>
